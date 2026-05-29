@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>That's What She Said — стикеры The Office by Егор Жгун</title>
+<meta name="description" content="Сайт в честь стикеров The Office от художника Егора Жгуна." />
+<style>
+  :root{
+    --bg:#f7f4ef;
+    --ink:#1a1714;
+    --brown:#6b4a30;
+    --brown-soft:#8a6a4a;
+    --line:#dcd4c8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:Georgia,"Times New Roman",serif;
+    background:var(--bg);
+    color:var(--ink);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    position:relative;
+    overflow-x:hidden;
+  }
+
+  /* character watermark on the background */
+  .bg-char{
+    position:fixed;
+    right:-4vw;bottom:-2vh;
+    width:min(58vw,640px);
+    z-index:0;
+    opacity:.10;
+    pointer-events:none;
+    color:var(--brown);
+  }
+  .bg-char svg{width:100%;height:auto;display:block}
+
+  .content{position:relative;z-index:1;flex:1;display:flex;flex-direction:column}
+
+  header{
+    padding:48px 24px 0;
+    text-align:center;
+  }
+  .eyebrow{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    text-transform:uppercase;
+    letter-spacing:.32em;
+    font-size:12px;
+    color:var(--brown);
+    margin-bottom:18px;
+  }
+  h1{
+    font-size:clamp(34px,8vw,76px);
+    font-weight:normal;
+    line-height:1.05;
+    letter-spacing:-.01em;
+  }
+  h1 em{font-style:italic;color:var(--brown)}
+  .rule{width:54px;height:2px;background:var(--brown);margin:26px auto 0}
+
+  main{
+    max-width:680px;
+    margin:0 auto;
+    padding:40px 24px 60px;
+    text-align:center;
+    flex:1;
+  }
+  .lead{
+    font-size:clamp(18px,3.4vw,22px);
+    line-height:1.7;
+    margin-bottom:18px;
+  }
+  .lead b{color:var(--brown)}
+  .note{
+    font-size:15px;
+    line-height:1.7;
+    color:#5a5248;
+    margin-bottom:40px;
+  }
+
+  .links{
+    display:flex;gap:16px;justify-content:center;flex-wrap:wrap;
+  }
+  .lnk{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    text-decoration:none;
+    font-size:15px;font-weight:600;letter-spacing:.02em;
+    padding:15px 28px;border-radius:2px;
+    transition:transform .14s ease, background .14s ease, color .14s ease;
+  }
+  .lnk.solid{background:var(--ink);color:var(--bg)}
+  .lnk.solid:hover{background:var(--brown)}
+  .lnk.ghost{border:1.5px solid var(--ink);color:var(--ink)}
+  .lnk.ghost:hover{background:var(--ink);color:var(--bg)}
+  .lnk:active{transform:translateY(1px)}
+
+  .quote{
+    margin-top:54px;
+    font-style:italic;
+    font-size:clamp(20px,4vw,28px);
+    color:var(--brown);
+  }
+  .quote span{display:block;font-size:13px;font-style:normal;letter-spacing:.2em;
+    text-transform:uppercase;color:#8a7c6b;margin-top:14px;font-family:"Helvetica Neue",Arial,sans-serif}
+
+  footer{
+    position:relative;z-index:1;
+    text-align:center;
+    padding:26px 24px;
+    border-top:1px solid var(--line);
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:13px;color:#8a7c6b;
+  }
+  footer a{color:var(--brown);text-decoration:none}
+  footer a:hover{text-decoration:underline}
+
+  @media (max-width:520px){
+    .bg-char{width:96vw;right:-12vw;opacity:.08}
+    header{padding-top:38px}
+    .links{flex-direction:column;align-items:stretch}
+    .lnk{text-align:center}
+  }
+</style>
+</head>
+<body>
+
+  <!-- background character: line-art bust (Michael Scott vibe) -->
+  <div class="bg-char" aria-hidden="true">
+    <svg viewBox="0 0 400 460" fill="none" stroke="currentColor" stroke-width="5"
+         stroke-linecap="round" stroke-linejoin="round">
+      <!-- shoulders / suit -->
+      <path d="M40 460 C40 360 110 330 200 330 C290 330 360 360 360 460"/>
+      <!-- lapels -->
+      <path d="M200 330 L150 460 M200 330 L250 460"/>
+      <path d="M200 330 L172 392 L200 360 L228 392 Z"/>
+      <!-- tie -->
+      <path d="M200 360 L188 430 L200 452 L212 430 Z"/>
+      <!-- neck -->
+      <path d="M172 300 L172 336 Q200 352 228 336 L228 300"/>
+      <!-- head -->
+      <path d="M128 190 C128 110 272 110 272 190 C272 268 240 312 200 312 C160 312 128 268 128 190Z"/>
+      <!-- hair -->
+      <path d="M126 178 C120 120 165 92 200 92 C235 92 280 120 274 178 C262 150 235 138 200 138 C165 138 138 150 126 178Z"/>
+      <!-- eyebrows -->
+      <path d="M150 196 q22 -12 44 0 M206 196 q22 -12 44 0"/>
+      <!-- eyes -->
+      <circle cx="172" cy="214" r="6" fill="currentColor" stroke="none"/>
+      <circle cx="228" cy="214" r="6" fill="currentColor" stroke="none"/>
+      <!-- nose -->
+      <path d="M200 218 L192 250 Q200 258 208 250"/>
+      <!-- big grin -->
+      <path d="M158 270 Q200 312 242 270 Q200 292 158 270Z"/>
+    </svg>
+  </div>
+
+  <div class="content">
+    <header>
+      <p class="eyebrow">The Office · стикеры</p>
+      <h1>That's What <em>She</em> Said</h1>
+      <div class="rule"></div>
+    </header>
+
+    <main>
+      <p class="lead">
+        Этот сайт создан в честь стикеров <b>The Office</b> от знаменитого
+        художника <b>Егора Жгуна</b>.
+      </p>
+      <p class="note">
+        Узнаваемые лица сериала, нарисованные с любовью и фирменным юмором —
+        чёрное, белое и чуточку коричневого, как и положено классике.
+      </p>
+
+      <div class="links">
+        <a class="lnk solid" href="https://t.me/addstickers/ThatIsWhatSheSaid" target="_blank" rel="noopener">
+          Добавить стикеры →
+        </a>
+        <a class="lnk ghost" href="https://t.me/zhgun" target="_blank" rel="noopener">
+          Канал художника
+        </a>
+      </div>
+
+      <p class="quote">
+        “That's what she said.”
+        <span>Michael Scott</span>
+      </p>
+    </main>
+  </div>
+
+  <footer>
+    Сделано как трибьют · стикеры и арт © <a href="https://t.me/zhgun" target="_blank" rel="noopener">Егор Жгун</a>
+  </footer>
+
+</body>
+</html>
