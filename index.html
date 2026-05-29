@@ -20,6 +20,8 @@
     background:var(--bg);
     color:var(--ink);
     min-height:100vh;
+    min-height:100dvh;
+    -webkit-text-size-adjust:100%;
     display:flex;
     flex-direction:column;
     position:relative;
@@ -117,11 +119,45 @@
   footer a{color:var(--brown);text-decoration:none}
   footer a:hover{text-decoration:underline}
 
+  /* tablets */
+  @media (max-width:768px){
+    header{padding:40px 20px 0}
+    main{padding:34px 20px 52px}
+    .bg-char{width:min(70vw,460px);opacity:.09}
+  }
+
+  /* phones */
   @media (max-width:520px){
-    .bg-char{width:96vw;right:-12vw;opacity:.08}
-    header{padding-top:38px}
-    .links{flex-direction:column;align-items:stretch}
-    .lnk{text-align:center}
+    .bg-char{width:118vw;right:-22vw;bottom:-1vh;opacity:.07}
+    header{padding-top:34px}
+    .eyebrow{letter-spacing:.24em;font-size:11px;margin-bottom:14px}
+    .rule{margin-top:22px}
+    main{padding:30px 18px 48px}
+    .lead{margin-bottom:14px}
+    .note{margin-bottom:32px}
+    .links{flex-direction:column;align-items:stretch;gap:12px}
+    .lnk{text-align:center;padding:16px 22px;font-size:16px}
+    .quote{margin-top:42px}
+  }
+
+  /* very small phones */
+  @media (max-width:360px){
+    h1{font-size:30px}
+    .lead{font-size:17px}
+  }
+
+  /* landscape phones: keep character subtle, tighten vertical space */
+  @media (max-height:480px) and (orientation:landscape){
+    .bg-char{width:42vw;right:-2vw;opacity:.06}
+    header{padding-top:24px}
+    main{padding:22px 20px 32px}
+    .quote{margin-top:28px}
+  }
+
+  /* no hover on touch */
+  @media (hover:none){
+    .lnk.solid:hover{background:var(--ink)}
+    .lnk.ghost:hover{background:transparent;color:var(--ink)}
   }
 </style>
 </head>
