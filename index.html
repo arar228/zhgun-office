@@ -70,6 +70,19 @@
     text-align:center;
     flex:1;
   }
+  .hero{margin:0 auto 34px;max-width:440px}
+  .hero img{
+    width:100%;height:auto;display:block;
+    filter:drop-shadow(0 14px 30px rgba(60,40,20,.18));
+    animation:rise .7s ease both;
+  }
+  @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  .hero figcaption{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+    color:#8a7c6b;margin-top:16px;
+  }
+
   .lead{
     font-size:clamp(18px,3.4vw,22px);
     line-height:1.7;
@@ -200,6 +213,11 @@
     </header>
 
     <main>
+      <figure class="hero">
+        <img src="michael.png" alt="Michael Scott — World's Best Boss — That's What She Said, стикер Егора Жгуна" />
+        <figcaption>главный мем пака · «World's Best Boss»</figcaption>
+      </figure>
+
       <p class="lead">
         Этот сайт создан в честь стикеров <b>The Office</b> от знаменитого
         художника <b>Егора Жгуна</b>.
